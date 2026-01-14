@@ -1,0 +1,122 @@
+index.html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profile Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background: url('https://64.media.tumblr.com/ea26f2ea8b92f7ed2a918e4857526fa5/tumblr_mv78rhHrLN1r3maj7o1_500.gifv') center/cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 420px;
+      padding: 32px 28px 24px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(125,95,190,0.65), rgba(70,40,130,0.65));
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      color: #fff;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.15);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text {
+      font-size: 18px;
+      line-height: 1.45;
+      margin: 22px 0 30px;
+      opacity: 0.95;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .link {
+      flex: 1;
+      height: 54px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.12);
+      transition: 0.25s ease;
+    }
+
+    .link:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-3px);
+    }
+
+    .link img {
+      width: 26px;
+      height: 26px;
+      filter: invert(1);
+    }
+
+    @media (max-width: 480px) {
+      .card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">
+      <img src="/mnt/data/c6739a44-a9de-4b2e-b065-861ec0efe011.png" alt="avatar">
+    </div>
+
+    <div class="text">
+      Готов ли я к любви?<br>
+      Я до сих пор не уверен, что справился<br>
+      с искусством одиночества.
+    </div>
+
+    <div class="links">
+      <a class="link" href="https://open.spotify.com/user/313ypmhxzphhgwwnprwmgceoa6du" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify">
+      </a>
+      <a class="link" href="https://discord.com/users/1064463525034082314" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord">
+      </a>
+      <a class="link" href="https://t.me/Usuzuki192" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram">
+      </a>
+      <a class="link" href="https://tiktok.com/@d1xtt" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
