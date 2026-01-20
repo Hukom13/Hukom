@@ -1,0 +1,137 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hukom DSG</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("background.jpg") center/cover no-repeat fixed;
+      color: #fff;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 360px;
+      padding: 28px 24px 26px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(120,90,200,0.55), rgba(60,40,120,0.45));
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      border: 3px solid rgba(255,255,255,0.6);
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .status {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 16px;
+    }
+
+    .about {
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .links a {
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    .links a:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="card">
+    <div id="avatar" class="avatar"></div>
+
+    <h1>! Hukomᵈˢᵍ</h1>
+    <div class="status">15-Years Old · Discord Servers Creator</div>
+
+    <div class="about">
+      Welcome! I Discord Server designer. Making servers for free or upon payment.
+      Every time active. DMs open!
+    </div>
+
+    <div class="links">
+      <a href="https://discord.com/users/1064463525034082314" target="_blank">Discord</a>
+      <a href="https://t.me/Usuzuki192" target="_blank">Telegram</a>
+      <a href="https://open.spotify.com/user/313ypmhxzphhgwwnprwmgceoa6du" target="_blank">Spotify</a>
+    </div>
+
+    <footer>© Hukom DSG</footer>
+  </div>
+
+  <script>
+    // Discord avatar auto-update (uses user ID)
+    const userId = "1064463525034082314";
+    const avatar = document.getElementById("avatar");
+
+    function loadAvatar() {
+      const url = `https://cdn.discordapp.com/avatars/${userId}/`;
+      avatar.style.backgroundImage = `url(${url}?size=256)`;
+    }
+
+    loadAvatar();
+  </script>
+</body>
+</html>
